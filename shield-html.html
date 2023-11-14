@@ -8,36 +8,36 @@
 </head>
 
 <body>
-	<div style="width: 100%; height: 600px;">	
+	<div class="page">	
 		
 		<div class="left-div">
-			<div style="height: 150px; text-align:center;">
-				<img src="shield.jpg" style="width:120px;height: 180px;margin-bottom: 0px;">
+			<div style="height: 180px; text-align:center;">
+				<img src="shield.jpg" style="width:120px;height: 100%;margin-bottom: 0px;">
 			</div>
 
 			
-			<div>
-                <ul>
-                    <li>
-                        <h2 style="margin-top: 40px;"><a href="javascript:void(0);" onclick="changeContent('home')">HOME</a></h2>
-                    </li>
-                    <li>
-                        <h2><a href="javascript:void(0);" onclick="changeContent('about')">ABOUT</a></h2>
-                    </li>
-                    <li>
-                        <h2><a href="javascript:void(0);" onclick="changeContent('location')">LOCATION</a></h2>
-                    </li>
-                    <li>
-                        <h2><a href="javascript:void(0);" onclick="changeContent('booktable')">BOOK TABLE</a></h2>
-                    </li>
-                    <li>
-                        <h2><a href="javascript:void(0);" onclick="changeContent('order')">ORDER ONLINE</a></h2>
-                    </li>
-                    <li>
-                        <h2><a href="javascript:void(0);" onclick="changeContent('feedback')">FEED BACK</a></h2>
-                    </li>
-                </ul>
-            </div>
+			<div style="height:350px;">
+				<ul>
+					<li>
+						<h2 style="margin-top: 40px;"><a href="javascript:void(0);" onclick="changeContent('home')">HOME</a></h2>
+					</li>
+					<li>
+						<h2><a href="javascript:void(0);" onclick="changeContent('about')">ABOUT</a></h2>
+					</li>
+					<li>
+						<h2><a href="javascript:void(0);" onclick="changeContent('location')">LOCATION</a></h2>
+					</li>
+					<li>
+						<h2><a href="javascript:void(0);" onclick="changeContent('booktable')">BOOK TABLE</a></h2>
+					</li>
+					<li>
+						<h2><a href="javascript:void(0);" onclick="changeContent('order')">ORDER ONLINE</a></h2>
+					</li>
+					<li>
+						<h2><a href="javascript:void(0);" onclick="changeContent('feedback')">FEED BACK</a></h2>
+					</li>
+				</ul>
+			</div>
 
 			<div class="footer" style="text-align: center;">
 				<a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -47,7 +47,7 @@
 		</div>
 
 
-		 <div id="rightContent" class="right-div">
+		<div id="rightContent" class="right-div">
 			
 		</div>
 
@@ -55,153 +55,230 @@
 	</div>
 
 
- <script>
-        function changeContent(contentType) {
-            var rightDiv = document.getElementById("rightContent");
-            var content = "";
+	<script>
+		function changeContent(contentType) {
+			var rightDiv = document.getElementById("rightContent");
+			var content = "";
 
-            if (contentType === 'home') {
-                // You can load content for the "HOME" page here
-                content = "<h2>HOME Page Content</h2>";
-            } 
-            else if (contentType === 'about') {
-                // You can load content for the "ABOUT" page here
-                content = `
-                	<div style="width: 100%; height: 500px;">
-				<div style="margin:0px;border:1px solid black;width: 700px;height: 270px">
-					<img src="cafe.jpg" style="width: 700px;height: 270px;">
+			if (contentType === 'home') {
+				content = `
+				<div style="width: 80%; height: 100%;display: flex; flex-direction: column;">
+
+					<div class="image">
+						<img class="image_img" src="cafe.jpg">
+						<div class="img_overlay img_overlay__blur">
+							<p style="font-size:30PX;margin:0px;padding:0px"><b> WELCOME TO SHIELD  </b></p>
+							<p style="margin:0px;"> GOOD FOOD, GREAT VIBES</p>
+						</div>
+				    </div>
+				
+
+					<div style="display: flex; flex-direction: row;background-color:black;width: 100%; height: 25%;">
+
+						<div class="image" style="width: 50%;height:100%;">
+							<img class="image_img" src="breakfast.jpg">
+							<div class="img_overlay img_overlay__blur">
+								<p style="font-size:30PX;margin:0px;padding:0px"><b>BREAKFAST</b></p>
+							</div>
+				    	</div>
+
+				    	<div class="image" style="width: 50%;height:100%;">
+							<img class="image_img" src="maincourse.jpg">
+							<div class="img_overlay img_overlay__blur">
+								<p style="font-size:30PX;margin:0px;padding:0px"><b>MAINCOURSE</b></p>
+							</div>
+				    	</div>
+
+					</div>
+
+					<div style="display: flex; flex-direction: row;background-color:black;width: 100%; height: 25%;">
+
+						<div class="image" style="width: 50%;height:100%;">
+							<img class="image_img" src="burger.jpg">
+							<div class="img_overlay img_overlay__blur">
+								<p style="font-size:30PX;margin:0px;padding:0px"><b>BURGERS</b></p>
+							</div>
+				    	</div>
+
+				    	<div class="image" style="width: 50%;height:100%;">
+							<img class="image_img" src="salad.jpg">
+							<div class="img_overlay img_overlay__blur">
+								<p style="font-size:30PX;margin:0px;padding:0px"><b>SALADS & SIDES</b></p>
+							</div>
+				    	</div>
+
+					</div>
+
+					<div style="display: flex; flex-direction: row;background-color:black;width: 100%; height: 25%;">
+
+						<div class="image" style="width: 50%;height:100%;">
+							<img class="image_img" src="dessert.jpg">
+							<div class="img_overlay img_overlay__blur">
+								<p style="font-size:30PX;margin:0px;padding:0px"><b>DESSERTS</b></p>
+							</div>
+				    	</div>
+
+				    	<div class="image" style="width: 50%;height:100%;">
+							<img class="image_img" src="beverage.jpg">
+							<div class="img_overlay img_overlay__blur">
+								<p style="font-size:30PX;margin:0px;padding:0px"><b>BEVERAGES</b></p>
+							</div>
+				    	</div>
+
+					</div>
+
 				</div>
-				<div style="border:1px solid black;width: 700px;height: 230px;margin: 0px;">
-					<h2 style="margin-top: 100px;">
-						
-							ABOUT US
-						
-					</h2>
-				</div>
-			</div>
-
-			<div style="width: 100%; height: 260px;margin-left: 30px;">
-
-				<h2 style="text-align:left;">MEET OUR TEAM</h2>
-
-				<div class="shapes" style="height: 30%;">
-					<div style="border: 1px solid black;width: 125px;height: 60px;">
-						<h2 style="margin-top:15px;font-size: 25px;">PICTURE</h2>
+				`;
+			} 
+			else if (contentType === 'about') {
+				content = `
+				<div style="width: 100%; height: 500px;">
+					<div style="margin:0px;border:1px solid black;width: 100%;height: 270px">
+						<img src="cafe.jpg" style="width: 100%;height: 270px;">
 					</div>
-					<div style="margin-left: 40px;">
-						<img src="photo.jpg" style="width: 250px;height: 70px;">
+					<div style="border:1px solid black;width: 100%;height: 230px;margin: 0px;">
+						<h2 style="margin-top: 100px;">ABOUT US</h2>
 					</div>
 				</div>
 
-				<div class="shapes" style="height: 30%;">
-					<div style="border: 1px solid black;width: 125px;height: 60px;">
-						<h2 style="margin-top:15px;font-size: 25px;">PICTURE</h2>
+				<div style="width: 100%; height: 260px;">
+
+					<h2 style="text-align:left;">MEET OUR TEAM</h2>
+
+					<div class="shapes" style="height: 30%;width= 100%">
+						<div style="border: 1px solid black;width: 15%;height: 60px;">
+							<h2 style="margin-top:15px;font-size: 25px;">PICTURE</h2>
+						</div>
+						<div style="margin-left: 30px;width:25%">
+							<img src="photo.jpg" style="width: 100%;height: 70px;">
+						</div>
 					</div>
-					<div style="margin-left: 40px;">
-						<img src="photo.jpg" style="width: 250px;height: 70px;">
+
+					<div class="shapes" style="height: 30%;width= 100%">
+						<div style="border: 1px solid black;width: 15%;height: 60px;">
+							<h2 style="margin-top:15px;font-size: 25px;">PICTURE</h2>
+						</div>
+						<div style="margin-left: 30px;width:25%">
+							<img src="photo.jpg" style="width: 100%;height: 70px;">
+						</div>
+					</div>
+
+					<div class="shapes" style="height: 30%;width= 100%">
+						<div style="border: 1px solid black;width: 15%;height: 60px;">
+							<h2 style="margin-top:15px;font-size: 25px;">PICTURE</h2>
+						</div>
+						<div style="margin-left: 30px;width:25%">
+							<img src="photo.jpg" style="width: 100%;height: 70px;">
+						</div>
+					</div>
+
+				</div>
+				`;
+			} 
+			else if (contentType === 'location') {
+				content = `
+				<div style="width: 100%; height: 100%;">
+
+					<div style="margin:0px;border:1px solid black;width: 80%;height: 50%">
+						<img src="cafe.jpg" style="width: 100%;height: 100%;">
+					</div>
+
+					<div style="width: 80%;height: 40%;margin: 0px;display: flex; flex-direction: row;justify-content: space-evenly;align-items: center;">
+						<div style="width: 30%;height: 40%;">
+							<img src="phone.jpg" style="width: 100%;height: 100%;object-fit: scale-down;">
+							<p style="text-align: center;">PHONE NUMBER</p>
+						</div>
+						<div style="width: 30%;height: 40%;">
+							<img src="map.jpg" style="width: 100%;height: 100%;object-fit: scale-down;">
+							<p style="text-align: center;">LOCATION ON GOOGLE MAPS</p>
+						</div>
+					</div>
+
 					</div>
 				</div>
-
-				<div class="shapes" style="height: 30%;">
-					<div style="border: 1px solid black;width: 125px;height: 60px;">
-						<h2 style="margin-top:15px;font-size: 25px;">PICTURE</h2>
-					</div>
-					<div style="margin-left: 40px;">
-						<img src="photo.jpg" style="width: 250px;height: 70px;">
-					</div>
+				`;
+			} 
+			else if (contentType === 'booktable') {
+				content = `
+				<div style="margin-bottom:150px;"><h3>shield is the place for any food-accomanied occasion</h3></div>
+				<div style="width: 600px;">
+				<form method="POST">
+				<div style="margin-bottom: 50px;align-content: center;padding-bottom: 80px;">
+				<div style="float: left;margin-left: 40px;"> 
+				<label style="font-size: 15px;" for="name">NAME</label>
+				<br>
+				<input type="text" id="name" placeholder="Your name" style="border: 0px;">
 				</div>
 
-			</div>
-                `;
-            } 
-            else if (contentType === 'location') {
-                // You can load content for the "LOCATION" page here
-                content = "<h2>LOCATION Page Content</h2>";
-            } 
-            else if (contentType === 'booktable') {
-                // You can load content for the "BOOK TABLE" page here
-                content = `
-                <div style="margin-bottom:150px;"><h3>shield is the place for any food-accomanied occasion</h3></div>
-                <div style="width: 600px;">
-                    <form method="POST">
-                        <div style="margin-bottom: 50px;align-content: center;padding-bottom: 80px;">
-                            <div style="float: left;margin-left: 40px;"> 
-                                <label style="font-size: 15px;" for="name">NAME</label>
-                                <br>
-                                <input type="text" id="name" placeholder="Your name" style="border: 0px;">
-                            </div>
+				<div style="float:right;margin-right: 60px;">
+				<label style="font-size: 15px;" for="number">PHONE</label>
+				<br>
+				<input type="text" id="number" placeholder="Your phone number" style="border: 0px;">
+				</div>
+				</div>
 
-                            <div style="float:right;margin-right: 60px;">
-                                <label style="font-size: 15px;" for="number">PHONE</label>
-                                <br>
-                                <input type="text" id="number" placeholder="Your phone number" style="border: 0px;">
-                            </div>
-                        </div>
+				<div class="boxs" style="margin-top:50px;width: 600px;">
 
-                        <div class="boxs" style="margin-top:50px;width: 600px;">
+				<div class="box">
+				<label style="font-size: 15px;" for="date">DATE</label>
+				<br>
+				<input type="date" id="date" value="2022-10-07" style="border: 0px;">
+				</div>
 
-                            <div class="box">
-                                <label style="font-size: 15px;" for="date">DATE</label>
-                                <br>
-                                <input type="date" id="date" value="2022-10-07" style="border: 0px;">
-                            </div>
+				<div class="box">
+				<label style="font-size: 15px;" for="no of people">NO. OF PEOPLE</label>
+				<br>
+				<select id="no of people" style="width:60px;">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2" selected="true">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				</select>
+				</div>
 
-                            <div class="box">
-                                <label style="font-size: 15px;" for="no of people">NO. OF PEOPLE</label>
-                                <br>
-                                <select id="no of people" style="width:60px;">
-                                    <option value="0">0</option>
-                                    <option value="1">1</option>
-                                    <option value="2" selected="true">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                </select>
-                            </div>
-
-                            <div class="box">
-                                <input type="submit" value="CHECK AVAILABILITY" style="color:white;background-color: black;height: 50px;">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            `;
-            } 
-            else if (contentType === 'order') {
-                // You can load content for the "ORDER ONLINE" page here
-                content = `
-                <div style="width: 100%; height: 33%;">
+				<div class="box">
+				<input type="submit" value="CHECK AVAILABILITY" style="color:white;background-color: black;height: 50px;">
+				</div>
+				</div>
+				</form>
+				</div>
+				`;
+			} 
+			else if (contentType === 'order') {
+				content = `
+				<div style="width: 100%; height: 20%;">
 				<h2>ORDER ONLINE</h2>
 				<p>We've teamed up with your favourite delivery apps to deliver you our freshest food and coffee. Simply select your favourite app and choose from our menu range. You can find us on most delivery platforms. Find your preferred delivery partner below and download on iOS and Android to get started with your order.</p>
-			</div>
+				</div>
 
-			<div style="width: 100%; height: 33%;">
+				<div style="width: 100%; height: 20%;">
 				<div class="deliveroo-div">
-					<h3>Order with Deliveroo</h3>
-					<p>Choose from a range of delicious menu items and order your favourites to be delivered with Deliveroo</p>
+				<h3>Order with Deliveroo</h3>
+				<p>Choose from a range of delicious menu items and order your favourites to be delivered with Deliveroo</p>
 				</div>
 				<div class="button-div">
-					<button class="button">order now</button>
+				<button class="button">order now</button>
 				</div>
-			</div>
+				</div>
 
-			<div style="width: 100%; height: 33%;">
+				<div style="width: 100%; height: 20%;">
 				<div class="deliveroo-div">
-					<h3>Order with Talabat</h3>
-					<p>Choose from a range of delicious menu items and order your favourites to be delivered with Talabat</p>
+				<h3>Order with Talabat</h3>
+				<p>Choose from a range of delicious menu items and order your favourites to be delivered with Talabat</p>
 				</div>
 				<div class="button-div">
-					<button class="button">order now</button>
+				<button class="button">order now</button>
 				</div>
-			</div>
-                `;
-            } 
-            else if (contentType === 'feedback') {
-                // You can load content for the "FEEDBACK" page here
-                content = `
-                <div style="margin-left: 250px;margin-bottom: 80px;"><h1>FEED BACK</h1></div>
+				</div>
+				`;
+			} 
+			else if (contentType === 'feedback') {
+				content = `
+				<div style="margin-left: 250px;margin-bottom: 80px;"><h1>FEED BACK</h1></div>
 
-			<div>
-			<form method="POST">
+				<div>
+				<form method="POST">
 
 				<div style="margin-bottom: 50px;">
 				<label for="name" style="color:#008080">Name*</label>
@@ -227,19 +304,19 @@
 				<div>
 				<input style="width:100px;height:35px;color:white;background-color:#008080;font-weight: bold;border: 1px solid black;border-radius: 5px;" type="submit" name="submit" value="Submit">
 				</div>
-			</form>
-			</div>
-			`;
-            }
+				</form>
+				</div>
+				`;
+			}
 
-            rightDiv.innerHTML = content;
-        }
-    </script>
+			rightDiv.innerHTML = content;
+		}
+	</script>
 
-<script>
+	<script>
     // Load the "HOME" page content when the website is first opened
-    changeContent('home');
-</script>
+		changeContent('home');
+	</script>
 
 </body>
 </html>
